@@ -22,26 +22,26 @@ int main() {
     // Check if the side length is greater than 0
     if (sideLength <= 0) {
         std::cout << "Please enter a number greater than 0!" << std::endl;
-    }
+    } else {
+        // Get the unit of measurement
+        std::cout << "Enter the unit of measurement: ";
+        std::cin >> unit;
 
-    // Get the unit of measurement
-    std::cout << "Enter the unit of measurement: ";
-    std::cin >> unit;
+        // Calculate the volume and the surface area
+        volume = sideLength * sideLength * sideLength;
+        surfaceArea = sideLength * sideLength * 6;
 
-    // Calculate the volume and the surface area
-    volume = sideLength * sideLength * sideLength;
-    surfaceArea = sideLength * sideLength * 6;
-
-    // Display the volume and surface area
-    // back to the user, with the proper units
-    std::cout << "The volume is: "
-              << std::fixed << std::setprecision(2)
-              << std::setfill('0') << volume;
-    std::cout << unit;
-    std::cout << "^3." << std::endl;
-    std::cout << "The surface area is: "
-              << std::fixed << std::setprecision(2)
-              << std::setfill('0') << surfaceArea;
-    std::cout << unit;
-    std::cout << "^2." << std::endl;
+        // Display the volume and surface area
+        // back to the user, with the proper units
+        std::cout << "The volume is: "
+            << std::fixed << std::setprecision(2)
+                << std::setfill('0') << volume;
+            std::cout << unit;
+        std::cout << "^3." << std::endl;
+        std::cout << "The surface area is: "
+            << std::fixed << std::setprecision(2)
+            << std::setfill('0') << surfaceArea;
+        std::cout << unit;
+        std::cout << "^2." << std::endl;
+        }
 }
